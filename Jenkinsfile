@@ -1,20 +1,18 @@
 pipeline {
     agent any
-    stages {
-        stage('Test') {
-            steps {
-                sh 'make check'
+        stages {
+            stage ('Get the code'){
+                checkout scm;
             }
-        }
-    }
-    post {
-        always {
-            emailext(
-               body: '${env.BUILD_LOG}',
-               attachLog: true,
-               subject: '${env.BUILD_ID}',
-               to: 'santoshiyengar@gmail.com'
-            )   
+            stage ('Compile the code'){
+                python trial1.py
+            }
+            stage('Unit Test'){
+                echo "Unit Test Done"
+            }
+            stage('Build'){
+                echo "Built, Ready for Deployment..."
+            }
         }
     }
 }
