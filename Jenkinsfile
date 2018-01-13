@@ -5,7 +5,7 @@ pipeline {
                 checkout scm;
             }
             stage ('Compile the code'){
-                python trial1.py
+                python trial2.py
             }
             stage('Unit Test'){
                 echo "Unit Test Done"
