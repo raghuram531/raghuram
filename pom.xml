@@ -1,0 +1,15 @@
+<plugin>
++		<groupId>maven-python-mojos</groupId>
++		<artifactId>maven-bdd-plugin</artifactId>
++		<version>3.5.2</version>
++		<executions>
++			<execution>
++				<goals>
++					<goal>nose</goal>
++				</goals>
++				<configuration>
++					<python>python2.7</daemon>
++				</configuration>
++			</execution>
++		</executions>
++	</plugin>
