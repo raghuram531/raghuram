@@ -3,7 +3,8 @@ node {
         checkout scm;
     }
     stage ('Compile the code'){
-        bat 'C:\\Users\\ragvadla\\PycharmProjects\\venv\\Scripts\\python trial2.py'
+        bat 'dir'
+        //bat 'C:\\Users\\ragvadla\\PycharmProjects\\venv\\Scripts\\python trial2.py'
     }
     stage('Unit Test'){
         echo "Unit Test Done"
