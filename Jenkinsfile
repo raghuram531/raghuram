@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    node {
         stages {
             stage ('Get the code'){
                 checkout scm;
